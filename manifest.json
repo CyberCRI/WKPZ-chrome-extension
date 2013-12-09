@@ -12,6 +12,7 @@
     "persistent" : false,
     "scripts" : [
       "jquery.js",
+      "js/common.js",
       "background.js"
     ]
   },

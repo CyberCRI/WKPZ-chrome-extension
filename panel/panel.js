@@ -1,19 +1,6 @@
 var oauth_token = null;
 
-
-function signout(token){
-
-  console.log("logging out...")
-
-  chrome.identity.removeCachedAuthToken(token, function(){});
-
-}
-
-function oAuthPlusMe(callback){
-  $.get("https://www.googleapis.com/plus/v1/people/me",{
-    "access_token": oauth_token
-  }, callback);
-}
+var current_user = {};
 
 
 chrome.identity.getAuthToken({ 'interactive': true }, function(token) {
@@ -31,7 +18,11 @@ chrome.identity.getAuthToken({ 'interactive': true }, function(token) {
     });
 
 
-    oAuthPlusMe(function(me){
+    oAuthPlusMe(function(token, me){
+      current_user = me;
+
+      console.log(me);
+
       $("#info .name").html(me.displayName);
       $("#info .avatar img").attr("src", me.image.url);
     });
