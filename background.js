@@ -1,8 +1,21 @@
+function post_step(step){
+  $.post("http://api.wkpdz.11d.im/steps", step);
+
+  // $http({
+  //   method: 'POST',
+  //   url: 'http://api.wkpdz.11d.im/steps',
+  //   data: step
+  // });
+}
+
+
+console.log("meu");
+
 chrome.webNavigation.onCommitted.addListener(function (e){
 
   chrome.identity.getAuthToken({ 'interactive': true }, function(token) {
     // Use the token.
-    // console.log(token);
+    console.log(token);
 
     // console.log("coucou");
     // console.log(e)
@@ -14,7 +27,10 @@ chrome.webNavigation.onCommitted.addListener(function (e){
       e.userId = me.id;
       e.time    = e.timeStamp;
 
-      $.post("http://api.wkpdz.11d.im/steps", e);
+      console.log(e);
+
+      post_step(e);
+
     });
   });
 

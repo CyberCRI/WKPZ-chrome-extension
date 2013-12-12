@@ -10,11 +10,13 @@
 
   "background" : {
     "persistent" : false,
-    "scripts" : [
-      "jquery.js",
-      "js/common.js",
-      "background.js"
-    ]
+    "page": "background/background.html"
+//     "scripts" : [
+// //      "js/angular.js",
+//       "jquery.js",
+//       "js/common.js",
+//       "background.js"
+//     ]
   },
 
   "permissions": [
