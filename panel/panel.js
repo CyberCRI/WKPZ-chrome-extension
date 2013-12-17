@@ -18,7 +18,7 @@ chrome.identity.getAuthToken({ 'interactive': true }, function(token) {
     });
 
 
-    oAuthPlusMe(function(token, me){
+    oAuthPlusMe(token, function(me){
       current_user = me;
 
       console.log(me);

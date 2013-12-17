@@ -3,20 +3,14 @@
 
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnC9opueaNH1zF+nEQbUI9nvFhmPZhclRYgE5ema5GKiVB4n1nsUw2Tw6GQyLEtogHKuZlOElZMsTIpBk89G8dSMbg2qE5b4ed3uaitrBjgU3sD+46nVjryeiv1zZL/rIcjQIX+TKvscdFxVvu9M7ut0vNrrcq2FHg5v+O5ZK9qk/1wvFfFQuwEQeeewMp1z43fOrmBGMfY4fTVZIxzUfLqsQ8pFMkvBcuUvLUVlfFD8UOKFGDq/dc3LNF2WSEI8yBZl80tBplYZkktNmwdEM3WvbcnHY/CyUbMxzi8Yh4IHnCzqaSrFIPIzP71AeSZPliyUQhZYN9jiTTm1KrbioEQIDAQAB",
 
-  "name": "wekeypezia.me",
+  "name": "wekeypedzia.me",
   "description": "",
-  "version": "1.0",
+  "version": "1.0.1",
 
 
   "background" : {
     "persistent" : false,
     "page": "background/background.html"
-//     "scripts" : [
-// //      "js/angular.js",
-//       "jquery.js",
-//       "js/common.js",
-//       "background.js"
-//     ]
   },
 
   "permissions": [
@@ -33,8 +27,7 @@
   },
 
   "browser_action": {
-    "default_icon": "icon.png",
-
-    "default_popup": "dashboard.html"
+    "default_icon": "images/icon-32x32.png",
+    "default_popup": "panel/panel.html"
   }
 }

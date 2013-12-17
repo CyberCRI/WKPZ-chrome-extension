@@ -37,5 +37,3 @@ chrome.webNavigation.onCommitted.addListener(function (e){
 }, { url : [
   { hostSuffix : "wikipedia.org" }
 ]});
-
-
